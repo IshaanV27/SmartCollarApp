@@ -16,7 +16,7 @@ Designed for pet owners using the SMART collar, allows functionality to monitor:
 
 `/Screenshots` contains screenshots of the app, activity diagram, etc.
 
-`/App.s` contains the current code for the app
+`/App.js` contains the current code for the app
 
 ## Tech Stack
 
