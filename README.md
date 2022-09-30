@@ -1,6 +1,7 @@
 ## About The Project
 
 ***Currently in development!***  
+
 ***Project for ECE 49022 (Senior Design)***
 
 *Mobile App for the SMART Collar!*
@@ -12,6 +13,9 @@ Designed for pet owners using the SMART collar, allows functionality to monitor:
 
 
 ## Contents
+`/Screenshots` contains screenshots of the app, activity diagram, etc.
+
+`/
 ### Modified by me
 ### Default
 ### Written from scratch
