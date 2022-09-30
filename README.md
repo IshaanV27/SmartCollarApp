@@ -13,13 +13,10 @@ Designed for pet owners using the SMART collar, allows functionality to monitor:
 
 
 ## Contents
+
 `/Screenshots` contains screenshots of the app, activity diagram, etc.
 
-`/
-### Modified by me
-### Default
-### Written from scratch
-
+`/App.s` contains the current code for the app
 
 ## Tech Stack
 
