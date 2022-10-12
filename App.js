@@ -1,22 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen';
+import HeartRate from './screens/HeartRate';
+import Temperature from './screens/Temperature';
 
-// App component!
+// Main app screen!
+// Allows for seamless navigation between screens
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name='Home'
+          component={HomeScreen}
+          options={{ title: 'Home' }}
+          />
+
+        <Stack.Screen
+          name='Heart Rate'
+          component={HeartRate}
+          options={{ title: 'Heart Rate' }}
+        />
+        
+        <Stack.Screen
+          name='Temperature'
+          component={Temperature}
+          options={{ title: 'Temperature' }}
+        />
+        
+      </Stack.Navigator>
+    </NavigationContainer>
+    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  buttons: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20
   },
 });

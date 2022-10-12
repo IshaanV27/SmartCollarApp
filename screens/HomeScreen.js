@@ -1,26 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity} from 'react-native';
-import Thermometer from '../components/Thermometer';
 
-// Temperature
+// Home screen screen!
 
-const Temperature = ({}) => {
+const HomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
       source={require('../assets/background.jpg')}
       style={styles.background}
     >
-      <View style={styles.background}>
+      <View>
 
-        <Thermometer></Thermometer>
-        
-        {/* <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('Heart Rate')
+          }
+        >
           <Text style={styles.buttonHeart}>Heart Rate</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('Temperature')
+          }
+        >
           <Text style={styles.buttonTemp}>Temperature</Text>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Text style={styles.buttonLocation}>Location</Text>
+        </TouchableOpacity>
 
       </View>
     </ImageBackground>
@@ -76,4 +85,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Temperature;
+export default HomeScreen;

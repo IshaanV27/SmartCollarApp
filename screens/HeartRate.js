@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity} from 'react-native';
-import Thermometer from '../components/Thermometer';
+import BeatingHeart from '../components/BeatingHeart';
 
-// Temperature
+// Heart rate screen!
 
-const Temperature = ({}) => {
+const HeartRate = ({}) => {
   return (
     <ImageBackground
       source={require('../assets/background.jpg')}
@@ -12,7 +12,7 @@ const Temperature = ({}) => {
     >
       <View style={styles.background}>
 
-        <Thermometer></Thermometer>
+        <BeatingHeart></BeatingHeart>
         
         {/* <TouchableOpacity>
           <Text style={styles.buttonHeart}>Heart Rate</Text>
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Temperature;
+export default HeartRate;
