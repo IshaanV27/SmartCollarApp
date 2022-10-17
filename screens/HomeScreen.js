@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity} from 'react-native';
 
-// Home screen screen!
+// Home screen - created as a component
 
 const HomeScreen = ({ navigation }) => {
   return (

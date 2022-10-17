@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity} from 'react-native';
 import BeatingHeart from '../components/BeatingHeart';
 
-// Heart rate screen!
+// Heart rate screen - created as a component
 
 const HeartRate = ({}) => {
   return (
@@ -13,14 +13,6 @@ const HeartRate = ({}) => {
       <View style={styles.background}>
 
         <BeatingHeart></BeatingHeart>
-        
-        {/* <TouchableOpacity>
-          <Text style={styles.buttonHeart}>Heart Rate</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Text style={styles.buttonTemp}>Temperature</Text>
-        </TouchableOpacity> */}
 
       </View>
     </ImageBackground>

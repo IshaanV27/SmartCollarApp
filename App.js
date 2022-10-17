@@ -6,7 +6,8 @@ import HomeScreen from './screens/HomeScreen';
 import HeartRate from './screens/HeartRate';
 import Temperature from './screens/Temperature';
 
-// Main app screen!
+// Main app layout
+// Contains navigation stack
 // Allows for seamless navigation between screens
 
 const Stack = createNativeStackNavigator();

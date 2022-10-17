@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import { Text, View, StyleSheet, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+// Pulsing thermometer for the thermometer screen
+
 const Thermometer = ({}) => {
   const anim = useRef(new Animated.Value(1));
 

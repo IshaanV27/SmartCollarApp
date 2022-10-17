@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity} from 'react-native';
 import Thermometer from '../components/Thermometer';
 
-// Temperature
+// Temperature screen - created as a component
 
 const Temperature = ({}) => {
   return (
@@ -13,14 +13,6 @@ const Temperature = ({}) => {
       <View style={styles.background}>
 
         <Thermometer></Thermometer>
-        
-        {/* <TouchableOpacity>
-          <Text style={styles.buttonHeart}>Heart Rate</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Text style={styles.buttonTemp}>Temperature</Text>
-        </TouchableOpacity> */}
 
       </View>
     </ImageBackground>

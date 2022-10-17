@@ -6,19 +6,10 @@
 
 *Mobile App for the SMART Collar!*
 
-Designed for pet owners using the SMART collar, allows functionality to monitor:
+Designed for pet owners using the SMART collar, allows functionality to monitor real-time:
 - Temperature
 - Heart rate
 - Location
-
-
-## Contents
-
-`/Screenshots` contains screenshots of the app, activity diagram, etc.
-
-`/screens` contains the various screens that will be shown to the user
-
-`App.js` contains the current code for the app
 
 ## Tech Stack
 
@@ -26,17 +17,33 @@ Built using:
 [![React][React.js]][React-url]  
 [![Expo][Expo.dev]][Expo-url]
 
+## Contents
+
+`App.js` - navigation stack and overall layout of app
+
+`package.json` - libraries and packages installed in project
+
+`/components` - reusable components made to be used across the app
+
+`/screens` - various screens that are displayed to the user
+
+`/assets` - icons and logos used within the app
+
+`/screenshots` - screenshots of the design, activity diagram, etc.
+
 ## Activity Diagram
 
-<img src="Screenshots/Activity.png" width="350" height="300">
-
+<img src="screenshots/Activity.png" width="350" height="300">
 
 ## Screenshots
 
+<p float="left" padding-right="10px">
+  <img src="screenshots/HomeScreen.png" width="225" /> 
+  <img src="screenshots/HeartRateScreen.png" width="225" />
+  <img src="screenshots/TempScreen.png" width="225" />
+</p>
 
-
-
-## Senior Design Team (ECE 49022)
+## Team 53 - ECE 49022 - Senior Design
 
 - Ishaan Verma (CompE)
 - Nihith Chaturvedula (CompE)
