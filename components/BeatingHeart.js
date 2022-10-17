@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Text, View, StyleSheet, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-// Beating heart for the heart rate screen
+// Beating heart for the heart rate screen - created as a component
 
 const BeatingHeart = ({}) => {
   const anim = useRef(new Animated.Value(1));
