@@ -7,8 +7,8 @@
 *Mobile App for the SMART Collar!*
 
 Designed for pet owners using the SMART collar, allows functionality to monitor real-time:
+- Heart Rate
 - Temperature
-- Heart rate
 - Location
 
 ## Tech Stack
