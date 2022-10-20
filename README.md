@@ -33,7 +33,7 @@ Built using:
 
 ## Activity Diagram
 
-<img src="screenshots/Activity.png" width="350" height="300">
+<img src="screenshots/ActivityDiagram.drawio.png" width="350" height="300">
 
 ## Screenshots
 
