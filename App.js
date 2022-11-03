@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import HeartRate from './screens/HeartRate';
 import Temperature from './screens/Temperature';
+import Location from './screens/Location';
 
 // Main app layout
 // Contains navigation stack
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
         <Stack.Screen 
           name='Home'
           component={HomeScreen}
@@ -32,6 +34,12 @@ export default function App() {
           name='Temperature'
           component={Temperature}
           options={{ title: 'Temperature' }}
+        />
+
+        <Stack.Screen
+          name='Location'
+          component={Location}
+          options={{ title: 'Location' }}
         />
         
       </Stack.Navigator>

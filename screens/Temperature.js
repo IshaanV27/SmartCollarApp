@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TouchableOpacity} from 'react-native';
 import Thermometer from '../components/Thermometer';
-
+import css from './index.css';
 // Temperature screen - created as a component
 
 const Temperature = ({}) => {

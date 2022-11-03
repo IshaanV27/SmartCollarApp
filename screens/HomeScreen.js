@@ -27,7 +27,11 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.buttonTemp}>Temperature</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('Location')
+          }
+        >
           <Text style={styles.buttonLocation}>Location</Text>
         </TouchableOpacity>
 
