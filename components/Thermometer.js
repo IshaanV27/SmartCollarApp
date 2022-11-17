@@ -6,8 +6,11 @@ import { Ionicons } from '@expo/vector-icons';
 
 const Thermometer = ({}) => {
   const anim = useRef(new Animated.Value(1));
-  const [temp, setTemp] = useState(0);
-  
+  const [temp, setTemp] = useState({
+    currTemp: [],
+  });
+  // const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     // makes the sequence loop
     Animated.loop(
@@ -28,6 +31,47 @@ const Thermometer = ({}) => {
       ])
     ).start();
   }, []);
+
+  const getTemp = async () => {
+    try {
+      const res = await fetch(
+        "https://api.thingspeak.com/channels/1920263/fields/4.json?api_key=0N5L6ZF3MI6DRJKB&results=1"
+      );
+      const data = await res.json();
+      const pulledTemp = Math.round(data.feeds[0].field4);
+
+      setTemp({
+        currTemp: pulledTemp
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    const intervalCall = setInterval(() => {
+      getTemp();
+    }, 10000);
+    return () => {
+      clearInterval(intervalCall);
+    };
+  }, []);
+
+  // const newTemp = useMemo(() => {
+  //   const displayTemp = temp.feeds[0].field4;
+  // }, [temp]);
+
+  // const getTemp = async () => {
+  //   setIsLoading(true);
+  //   const response = await fetch(
+  //     'https://api.thingspeak.com/channels/1920263/fields/4.json?api_key=0N5L6ZF3MI6DRJKB&results=1'
+  //   );
+  //   const data = await response.json();
+    
+  //   setIsLoading(false);
+
+
+  // };
 
   // useEffect(() => {
   //   const interval = setInterval(fetchTemp, 5000);
@@ -55,12 +99,14 @@ const Thermometer = ({}) => {
     <View style={styles.container}>
 
         <View style={styles.container1}>
-            <Text style={styles.heartText}> 72 </Text>
+            <Text style={styles.heartText}>
+              {temp.currTemp}ºF
+            </Text>
         </View>
         
         <View style={styles.container2}>
             <Animated.View style={{ transform: [{ scale: anim.current }] }}>
-            <Ionicons name="thermometer-outline" size={40} color="blue" />
+              <Ionicons name="thermometer-outline" size={40} color="blue" />
             </Animated.View>
         </View>
       
@@ -82,7 +128,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: '65%'
+    marginTop: '70%'
   },
 
   container2: {
@@ -92,7 +138,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 8,
     marginTop: '0%',
-    marginLeft: '-40%'
+    marginLeft: '-40%',
+    marginRight: '-10%'
   },
 
   heartText: {
