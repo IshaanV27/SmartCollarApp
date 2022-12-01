@@ -31,11 +31,11 @@ Built using:
 
 ## Block Diagram
 
-<img src="screenshots/BlockDiagram.drawio.png" width="425" height="275">
+<img src="screenshots/BlockDiagram.drawio.png" width="500" height="300">
 
 ## Activity Diagram
 
-<img src="screenshots/ActivityDiagram.drawio.png" width="350" height="300">
+<img src="screenshots/ActivityDiagram.drawio.png" width="500" height="450">
 
 ## Screenshots
 
