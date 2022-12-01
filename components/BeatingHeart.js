@@ -50,7 +50,7 @@ const BeatingHeart = ({}) => {
   useEffect(() => {
     const intervalCall = setInterval(() => {
       getheartRate();
-    }, 10000);
+    }, 5000);
     return () => {
       clearInterval(intervalCall);
     };
@@ -64,8 +64,10 @@ const BeatingHeart = ({}) => {
           <Ionicons name="md-heart" size={250} color="red" />
           </Animated.View>
         </View>
+
         <View style={styles.container2}>
-          {heartRate.currheartRate < 50 ? <Text style={styles.analyzeText}> Analyzing... </Text> : <Text style={styles.heartText}> {heartRate.currheartRate} </Text>}
+          {(heartRate.currheartRate == 0) ? <Text style={styles.contactText}> No contact detected! </Text> : (1 <= heartRate.currheartRate < 50) ? <Text style={styles.analyzeText}> Analyzing... </Text> : <Text style={styles.heartText}> {heartRate.currheartRate} </Text>}
+          {/* {(1 < heartRate.currheartRate < 50) ? <Text style={styles.analyzeText}> Analyzing... </Text> : <Text style={styles.heartText}> {heartRate.currheartRate} </Text>} */}
         </View>
         
       
@@ -121,6 +123,17 @@ const styles = StyleSheet.create({
     marginLeft: '-40%',
     padding: "2%",
     fontSize:  30,
+    marginTop: '-5%'
+  },
+
+  contactText: {
+    color: '#00FF00',
+    borderRadius: 25,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginLeft: '-40%',
+    padding: "2%",
+    fontSize:  20,
     marginTop: '-5%'
   },
 });

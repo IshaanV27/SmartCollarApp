@@ -1,8 +1,6 @@
 ## About The Project
 
-***Currently in development!***  
-
-***Project for ECE 49022 (Senior Design)***
+***Project for ECE 49022 (Senior Design) at Purdue University (Fall 2022)***
 
 *Mobile App for the SMART Collar!*
 
@@ -31,6 +29,10 @@ Built using:
 
 `/screenshots` - screenshots of the design, activity diagram, etc.
 
+## Block Diagram
+
+<img src="screenshots/BlockDiagram.drawio.png" width="425" height="275">
+
 ## Activity Diagram
 
 <img src="screenshots/ActivityDiagram.drawio.png" width="350" height="300">
@@ -38,17 +40,20 @@ Built using:
 ## Screenshots
 
 <p float="left" padding-right="10px">
-  <img src="screenshots/HomeScreen.png" width="225" /> 
+  <img src="screenshots/Fin_HomeScreen.png" width="225" /> 
+  <img src="screenshots/HeartRateContact.png" width="225" />
+  <img src="screenshots/HeartRateAnalyzing.png" width="225" />
   <img src="screenshots/HeartRateScreen.png" width="225" />
   <img src="screenshots/TempScreen.png" width="225" />
+  <img src="screenshots/LocationScreen.png" width="225" />
 </p>
 
 ## Team 53 - ECE 49022 - Senior Design
 
-- Ishaan Verma (CompE)
-- Nihith Chaturvedula (CompE)
-- Connor Davin (EE)
-- Miguel Velasco (EE)
+- Ishaan Verma - (CompE) - (Mobile App)
+- Nihith Chaturvedula - (CompE) - (GPS and LTE Connectivity)
+- Connor Davin - (EE) - (Embedded Systems)
+- Miguel Velasco - (EE) - (Power and Circuit Design)
 
 ## Contact
 

@@ -39,7 +39,8 @@ const Thermometer = ({}) => {
       );
       const data = await res.json();
       const pulledTemp = Math.round(data.feeds[0].field4);
-
+      // const pulledTemp = data.feeds[0].field4; // For testing purposes - to check if data is updating
+      
       setTemp({
         currTemp: pulledTemp
       });
@@ -51,7 +52,7 @@ const Thermometer = ({}) => {
   useEffect(() => {
     const intervalCall = setInterval(() => {
       getTemp();
-    }, 10000);
+    }, 5000);
     return () => {
       clearInterval(intervalCall);
     };
@@ -138,8 +139,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 8,
     marginTop: '0%',
-    marginLeft: '-40%',
-    marginRight: '-10%'
+    marginLeft: '-35%',
+    marginRight: '-15%'
   },
 
   heartText: {
